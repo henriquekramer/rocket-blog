@@ -11,3 +11,23 @@ const links = document.querySelectorAll('nav ul li a')
 for (const link of links){
   link.addEventListener('click', () => nav.classList.remove('show'))
 }
+
+/* Botão voltar para o topo*/
+const backToTopButton = document.querySelector('.back-to-top')
+
+function backToTop() {
+  if(window.scrollY >= 260) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+}
+
+window.addEventListener('scroll', () => {
+  backToTop()
+})
+
+function goToTop() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
