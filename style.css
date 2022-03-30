@@ -72,11 +72,14 @@ header{
 
 .menu li{
   padding: 0 0.1875rem;
-  cursor: pointer;
 }
 
 .menu li:hover{
   border-left: 2px solid var(--green);
+}
+
+.menu li a{
+  color: var(--white);
 }
 
 .filter-blog{
@@ -113,6 +116,22 @@ header{
 
 .search-button:hover{
   background: var(--green);
+}
+
+/* Icones do menu Toggle*/
+nav .icon-menu{
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+
+nav .icon-close{  
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  right: 2.5rem;
+  top: -1.5rem;
+  transition: 0.2s;
 }
 
 /*===== HOME SECTION ==========================*/
@@ -220,6 +239,14 @@ header{
   margin: 0 auto 2.5rem;
 }
 
+/*===== OTHER-NEWS-SECTION ==========================*/
+footer{
+  text-align: center;
+  padding: 0.6rem;
+  color: var(--white);
+  background: var(--purple-bg)
+}
+
 /*===== RESPONSIVIDADE ==========================*/
 @media (max-width: 1170px){
   .container{
@@ -245,9 +272,7 @@ header{
   .other-news-section{
     padding: 0 2rem;
   }
-
 }
-
 
 @media (max-width: 860px){
   .filter-blog{
@@ -264,19 +289,69 @@ header{
 }
 
 @media (max-width: 700px){
+  :root{
+    font-size: 15px;
+  }
+
+  header{
+    position: sticky;
+    top:0;
+  }
+
+  /* toggle menu*/
+  .toggle.icon-menu{
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+  }
+
+  nav.show .toggle.icon-menu{
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  nav.show div.icon-close{
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+  }
+
+  /* Mostrar menu */
+
+  nav.show .menu{
+    opacity: 1;
+    visibility: visible;
+    background: var(--purple-bg);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-content: center;
+    gap: 5rem;
+    font-size: 1.5rem;
+  }
+
+  /* Header */
   .container{
-    padding: 2.125rem 2rem 0;
+    padding: 2.125rem 2rem 1rem;
   }
   .menu{
     display: none;
   }
 
-  :root{
-    font-size: 15px;
-  }
-
+  /* Home Section*/
   .grid{
     grid-template-columns: 1fr;
+  }
+
+  .home-section .grid{
+    padding-top: 2.125rem;
   }
 
   .home-img{
@@ -284,6 +359,8 @@ header{
     padding: 0 2rem;
     margin-top: 2rem;
   }
+
+  /* Top News Section*/
 
   .full-post{
     padding: 0 2rem;
@@ -297,6 +374,7 @@ header{
     margin-top: 2rem;
   }
 
+  /* Other News Section*/
   .grid-3-columns{
     grid-template-columns: 1fr;
   }
@@ -308,9 +386,16 @@ header{
 
 @media (max-width: 400px){
   .container{
-    padding: 2.125rem 1rem 0;
+    padding: 2.125rem 1rem 1rem;
   }
 
+  .home-section .grid{
+    padding-top: 2.125rem;
+  }
+
+  .home-section h1{
+    font-size: 1.8rem;
+  }
   .home-section-items{
     padding: 0 1rem;
   }
