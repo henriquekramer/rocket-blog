@@ -62,7 +62,7 @@ header{
   padding-top: 4.125rem;
 }
 
-.menu ul{
+.menu{
   display: flex;
   gap: 2rem;
   font-size: 1.125rem;
@@ -70,12 +70,12 @@ header{
   color: var(--white);
 }
 
-.menu ul li{
+.menu li{
   padding: 0 0.1875rem;
   cursor: pointer;
 }
 
-.menu ul li:hover{
+.menu li:hover{
   border-left: 2px solid var(--green);
 }
 
@@ -115,8 +115,8 @@ header{
   background: var(--green);
 }
 
-/*===== FIRST SECTION ==========================*/
-.first-section{
+/*===== HOME SECTION ==========================*/
+.home-section{
   background: var(--purple-bg);
   border-bottom: 6px solid var(--green);
 }
@@ -130,23 +130,23 @@ header{
   max-width: 1170px;
 }
 
-.grid-content{
+.home-section-items{
   padding: 0 3.5rem 0 0;
 }
 
-.first-section h1{
+.home-section h1{
   font: 700 2.25rem 'Poppins';
   color: var(--button-bg);
 }
 
-.first-section p{
+.home-section p{
   color: var(--light-purple);
   font-size: 1.125rem;
   font-weight: 400;
   margin-top: 1rem;
 }
 
-.first-section a{
+.home-section a{
   display:flex;
   align-items: center;
   color: var(--button-bg);
@@ -155,23 +155,27 @@ header{
   gap: 0.5rem;
 }
 
-.grid-img{
+.home-img{
   display:flex;
   justify-content: flex-end;
 }
 
-/*===== SECOND SECTION ==========================*/
-.second-section{
-  background: var(--white-bg);
-}
-
-.full-post{
-  padding-right: 3rem;
+.home-section .post-img{
+  margin-bottom: 0;
 }
 
 .post-img{
   width: 100%;
   height: auto;
+}
+
+/*===== TOP-NEWS-SECTION ==========================*/
+.top-news-section{
+  background: var(--white-bg);
+}
+
+.full-post{
+  padding-right: 3rem;
 }
 
 .post-img,
@@ -203,12 +207,26 @@ header{
   margin-bottom: 3rem;
 }
 
-/*===== THIRD SECTION ==========================*/
-.grid-3{
+/*===== OTHER-NEWS-SECTION ==========================*/
+.other-news-section{
+  background: var(--white-bg);
+}
+
+.grid-3-columns{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  background: var(--white-bg);
   gap: 1.875rem;
   max-width: 1170px;
   margin: 0 auto 2.5rem;
+}
+
+@media (max-width: 830px){
+  .filter-blog{
+    display: none;
+  }
+
+  :root{
+    font-size: 12px;
+  }
+
 }
