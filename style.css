@@ -1,0 +1,214 @@
+/*===== RESET ==========================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*===== SR-ONLY ==========================*/
+.sr-only{   /* para sumir com os elementos que tem essa clase, porém o leitor de tela irá continuar lendo p/ acessiblidade*/
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: rect(0 0 0 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/*===== VARIABLES ==========================*/
+:root {
+  --purple-bg: #290742;
+  --dark-bg: #170027;
+  --white-bg: #FBF7FF;
+  --button-bg: #9e6dc2;
+  --white: #fff;
+  --light-purple: #fbf6ff;
+  --green: #4fff4b;
+}
+
+/*===== BASE ==========================*/
+body{
+  /* background: var(--purple-bg); */
+  background: var(--white-bg);
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header{
+  background: var(--purple-bg);
+  margin: 0 auto;
+}
+
+/*===== HEADER ==========================*/
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1170px;
+  padding-top: 4.125rem;
+}
+
+.menu ul{
+  display: flex;
+  gap: 2rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--white);
+}
+
+.menu ul li{
+  padding: 0 0.1875rem;
+  cursor: pointer;
+}
+
+.menu ul li:hover{
+  border-left: 2px solid var(--green);
+}
+
+.filter-blog{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-input{
+  height: 2.75rem;
+  width: 14.375rem;
+  border: none;
+  outline: none;
+  background: var(--dark-bg);
+  color: var(--white);
+  font-size: 0.875rem;
+  border-radius: 4px 0px 0px 4px;
+  text-indent: 1.625rem;
+}
+
+.search-input::placeholder{
+  color: var(--light-purple);
+}
+
+.search-button{
+  background: var(--button-bg);
+  height: 2.75rem;
+  width: 4.375rem;
+  border-radius: 0px 4px 4px 0px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.search-button:hover{
+  background: var(--green);
+}
+
+/*===== FIRST SECTION ==========================*/
+.first-section{
+  background: var(--purple-bg);
+  border-bottom: 6px solid var(--green);
+}
+
+.grid{
+  display:grid;
+  margin: 0 auto;
+  padding: 4rem 0;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 1170px;
+}
+
+.grid-content{
+  padding: 0 3.5rem 0 0;
+}
+
+.first-section h1{
+  font: 700 2.25rem 'Poppins';
+  color: var(--button-bg);
+}
+
+.first-section p{
+  color: var(--light-purple);
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+.first-section a{
+  display:flex;
+  align-items: center;
+  color: var(--button-bg);
+  font-weight: 700;
+  margin-top: 1.5rem;
+  gap: 0.5rem;
+}
+
+.grid-img{
+  display:flex;
+  justify-content: flex-end;
+}
+
+/*===== SECOND SECTION ==========================*/
+.second-section{
+  background: var(--white-bg);
+}
+
+.full-post{
+  padding-right: 3rem;
+}
+
+.post-img{
+  width: 100%;
+  height: auto;
+}
+
+.post-img,
+.post-date{
+  margin-bottom: 1rem;
+}
+
+.post-title{
+  font: 700 1.5rem 'Roboto';
+  color: var(--purple-bg);
+  margin-bottom: 1rem;
+}
+
+.small-posts{
+  padding: 0 2rem;
+}
+
+.post-date-small{
+  margin-bottom: 0.5rem;
+}
+
+.post-title-small{
+  font: 700 1.5rem 'Poppins';
+  color: var(--purple-bg);
+  margin-bottom: 0.5rem;
+}
+
+.post-content-small{
+  margin-bottom: 3rem;
+}
+
+/*===== THIRD SECTION ==========================*/
+.grid-3{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: var(--white-bg);
+  gap: 1.875rem;
+  max-width: 1170px;
+  margin: 0 auto 2.5rem;
+}
