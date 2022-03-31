@@ -23,9 +23,7 @@ function backToTop() {
   }
 }
 
-window.addEventListener('scroll', () => {
-  backToTop()
-})
+window.addEventListener('scroll', backToTop)
 
 function goToTop() {
   document.body.scrollTop = 0; // For Safari
